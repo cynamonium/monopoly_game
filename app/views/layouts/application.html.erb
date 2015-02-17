@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monopoly</title>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag  webpack_file('bare_minimal-bundle.js') %>
+  <%= javascript_include_tag  webpack_file('app_css-bundle.js') %>
+  <!-- individual styles for each page -->
+  <%= yield :top_scripts %>
+</head>
+<body>
+  <%= yield %>
+  <%= render 'setup_scripts' %>
+
+  <!-- individual scripts for each view -->
+  <%= yield :bottom_scripts %>
+</body>
+</html>

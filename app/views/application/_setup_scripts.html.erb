@@ -1,0 +1,15 @@
+<!-- app-bundle is just the App, that contains global settings -->
+<%= javascript_include_tag  webpack_file('app-bundle.js') %>
+
+<!-- common js includes js chunks, that all views will have, like libs + some of our logic -->
+<%= javascript_include_tag  webpack_file('common.js') %>
+
+<script>
+  var app = window.app || (window.app = {});
+  // this is the global app data
+  <% if @page %>
+    app.page = <%= raw @page.to_json.html_safe %>;
+  <% end %>
+</script>
+
+

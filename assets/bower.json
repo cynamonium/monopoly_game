@@ -1,0 +1,12 @@
+{
+  "name": "test",
+  "dependencies": {
+    "react": "~0.12.1",
+    "jquery": "~2.1.1",
+    "momentjs": "~2.8.3",
+    "numeraljs": "~1.5.3",
+    "jeet": "~6.1.2",
+    "nib": "~1.0.3",
+    "normalize.styl": "~3.0.0"
+  }
+}
